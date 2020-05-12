@@ -1,0 +1,1 @@
+export { onChooseWord } from "./events";

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/werewords/static/js/main.fc58bfcb.chunk.js",
+    "main.js.map": "/werewords/static/js/main.fc58bfcb.chunk.js.map",
+    "runtime-main.js": "/werewords/static/js/runtime-main.edc344ef.js",
+    "runtime-main.js.map": "/werewords/static/js/runtime-main.edc344ef.js.map",
+    "static/js/2.3a34557d.chunk.js": "/werewords/static/js/2.3a34557d.chunk.js",
+    "static/js/2.3a34557d.chunk.js.map": "/werewords/static/js/2.3a34557d.chunk.js.map",
+    "index.html": "/werewords/index.html",
+    "precache-manifest.9db37fcba97cf1c2db481a807cc501da.js": "/werewords/precache-manifest.9db37fcba97cf1c2db481a807cc501da.js",
+    "service-worker.js": "/werewords/service-worker.js",
+    "static/js/2.3a34557d.chunk.js.LICENSE.txt": "/werewords/static/js/2.3a34557d.chunk.js.LICENSE.txt",
+    "static/media/question.ae391e95.svg": "/werewords/static/media/question.ae391e95.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.edc344ef.js",
+    "static/js/2.3a34557d.chunk.js",
+    "static/js/main.fc58bfcb.chunk.js"
+  ]
+}

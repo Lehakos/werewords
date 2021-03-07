@@ -78,3 +78,5 @@ sample({
   fn: ({ markerType }) => markerType,
   target: minusRemainedMarker,
 });
+
+export const $remainedAnswersNum = $remainedMarkers.map((state) => state.yes);

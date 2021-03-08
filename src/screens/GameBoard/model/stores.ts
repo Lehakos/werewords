@@ -41,3 +41,5 @@ export const $playersList = combine(
     });
   }
 );
+
+export const $remainedAnswersNum = $remainedMarkers.map((state) => state.yes);

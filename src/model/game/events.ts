@@ -2,7 +2,7 @@ import { createEvent } from "effector";
 
 import { MarkerType } from "shared/markerTypes";
 
-export const setWord = createEvent<string>(" set word");
+export const setWord = createEvent<string>("set word");
 
 type GiveMarkerToPlayer = {
   playerId: string;
@@ -20,3 +20,5 @@ export const markerGivenToPlayer = createEvent<GiveMarkerToPlayer>(
 export const minusRemainedMarker = createEvent<MarkerType>(
   "minus remained marker"
 );
+
+export const startNewGame = createEvent("start new game");

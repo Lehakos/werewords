@@ -1,14 +1,14 @@
 import { createStore, guard } from "effector";
 
 import { nextScreenRequest } from "model/routing";
+import { startNewGame } from "model/game";
 import { roleNames, roles } from "shared/roles";
 
 import { indexChanged, changeIndexRequest } from "./events";
 
-export const $showToIndex = createStore(0).on(
-  indexChanged,
-  (index) => index + 1
-);
+export const $showToIndex = createStore(0)
+  .on(indexChanged, (index) => index + 1)
+  .on(startNewGame, () => 0);
 
 const showTo = [roleNames[roles.traitor], roleNames[roles.helper]];
 

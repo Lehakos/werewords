@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/werewords/static/js/main.7ebc0a9e.chunk.js",
-    "main.js.map": "/werewords/static/js/main.7ebc0a9e.chunk.js.map",
+    "main.js": "/werewords/static/js/main.1d77ec64.chunk.js",
+    "main.js.map": "/werewords/static/js/main.1d77ec64.chunk.js.map",
     "runtime-main.js": "/werewords/static/js/runtime-main.edc344ef.js",
     "runtime-main.js.map": "/werewords/static/js/runtime-main.edc344ef.js.map",
-    "static/js/2.316c638f.chunk.js": "/werewords/static/js/2.316c638f.chunk.js",
-    "static/js/2.316c638f.chunk.js.map": "/werewords/static/js/2.316c638f.chunk.js.map",
+    "static/js/2.87ba49b5.chunk.js": "/werewords/static/js/2.87ba49b5.chunk.js",
+    "static/js/2.87ba49b5.chunk.js.map": "/werewords/static/js/2.87ba49b5.chunk.js.map",
     "index.html": "/werewords/index.html",
-    "precache-manifest.a1f0b753e5522c9d4266c99fd3262018.js": "/werewords/precache-manifest.a1f0b753e5522c9d4266c99fd3262018.js",
+    "precache-manifest.7566f76c9bc385c44c80b8afcd531424.js": "/werewords/precache-manifest.7566f76c9bc385c44c80b8afcd531424.js",
     "service-worker.js": "/werewords/service-worker.js",
-    "static/js/2.316c638f.chunk.js.LICENSE.txt": "/werewords/static/js/2.316c638f.chunk.js.LICENSE.txt",
+    "static/js/2.87ba49b5.chunk.js.LICENSE.txt": "/werewords/static/js/2.87ba49b5.chunk.js.LICENSE.txt",
     "static/media/question.ae391e95.svg": "/werewords/static/media/question.ae391e95.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.edc344ef.js",
-    "static/js/2.316c638f.chunk.js",
-    "static/js/main.7ebc0a9e.chunk.js"
+    "static/js/2.87ba49b5.chunk.js",
+    "static/js/main.1d77ec64.chunk.js"
   ]
 }

@@ -8,14 +8,14 @@ import { ShowRoles } from "screens/ShowRoles";
 import { ShowWord } from "screens/ShowWord";
 import { ChooseWord } from "screens/ChooseWord";
 import { GameBoard } from "screens/GameBoard";
-import { screenNames, $currentScreen } from "model/routing";
+import { ScreensEnum, $currentScreenIndex } from "model/routing";
 
 function App() {
-  const currentScreen = useStore($currentScreen);
+  const currentScreen = useStore($currentScreenIndex);
   const isAddPlayers =
-    currentScreen === screenNames.addPlayers ||
-    currentScreen === screenNames.showRoles;
-  const isChooseWord = currentScreen === screenNames.chooseWord;
+    currentScreen === ScreensEnum.addPlayers ||
+    currentScreen === ScreensEnum.showRoles;
+  const isChooseWord = currentScreen === ScreensEnum.chooseWord;
 
   return (
     <Container>
@@ -23,8 +23,8 @@ function App() {
         {isAddPlayers && <AddPlayers />}
         {isChooseWord && <ChooseWord />}
         {!isAddPlayers && !isChooseWord && <GameBoard />}
-        {currentScreen === screenNames.showRoles && <ShowRoles />}
-        {currentScreen === screenNames.showWord && <ShowWord />}
+        {currentScreen === ScreensEnum.showRoles && <ShowRoles />}
+        {currentScreen === ScreensEnum.showWord && <ShowWord />}
       </Box>
     </Container>
   );

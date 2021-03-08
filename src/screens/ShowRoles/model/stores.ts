@@ -1,14 +1,14 @@
 import { createStore, combine, guard } from "effector";
 
 import { $players } from "model/players";
+import { startNewGame } from "model/game";
 import { nextScreenRequest } from "model/routing";
 
 import { playerChanged, changePlayerRequest } from "./events";
 
-export const $currentPlayerIndex = createStore(0).on(
-  playerChanged,
-  (index) => index + 1
-);
+export const $currentPlayerIndex = createStore(0)
+  .on(playerChanged, (index) => index + 1)
+  .on(startNewGame, () => 0);
 
 const $playersLength = $players.map((players) => players.length);
 

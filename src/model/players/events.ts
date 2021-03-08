@@ -1,6 +1,7 @@
 import { createEvent } from "effector";
 
 import { MarkerType } from "shared/markerTypes";
+
 import { PlayerBaseInformation, Ids } from "./types";
 
 export const savePlayers = createEvent<{

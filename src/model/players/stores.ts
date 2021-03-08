@@ -3,12 +3,17 @@ import mapValues from "lodash/mapValues";
 import shuffle from "lodash/shuffle";
 
 import { Role, roles as rolesMap } from "shared/roles";
+import { PLAYERS_NUM_FOR_SECOND_TRAITOR } from "shared/config";
 
 import { ById, Ids, Player } from "./types";
 import { savePlayers } from "./events";
 
 const generateRoles = (playersNum: number) => {
   const roles: Role[] = [rolesMap.traitor, rolesMap.helper];
+
+  if (playersNum > PLAYERS_NUM_FOR_SECOND_TRAITOR) {
+    roles.push(rolesMap.traitor);
+  }
 
   for (let i = roles.length; i < playersNum; i += 1) {
     roles.push(rolesMap.regular);

@@ -10,7 +10,7 @@ import ThumbDownIcon from "@material-ui/icons/ThumbDown";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import StarIcon from "@material-ui/icons/Star";
 
-import { markerTypes, MarkerType } from "shared/markerTypes";
+import { markerTypes, MarkerType } from "shared/constants/markerTypes";
 
 import { QuestionIcon } from "../Icons";
 

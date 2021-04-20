@@ -1,6 +1,5 @@
 import React from "react";
 import cx from "classnames";
-import { useStore } from "effector-react";
 import { makeStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import List from "@material-ui/core/List";
@@ -9,17 +8,17 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 
-import { $players, $master } from "../model";
+import { useSelectPlayers, useSelectMaster } from "model/players";
 
 export const FinishStep = () => {
-  const players = useStore($players);
-  const master = useStore($master);
+  const players = useSelectPlayers();
+  const master = useSelectMaster();
   const classes = useStyles();
 
   return (
     <List>
       {players.map((player) => {
-        const isMaster = player.id === master;
+        const isMaster = player.id === master?.id;
         const namesFirstLetter = player.name[0] || "";
 
         return (
@@ -29,6 +28,7 @@ export const FinishStep = () => {
                 {namesFirstLetter.toUpperCase()}
               </Avatar>
             </ListItemAvatar>
+
             <ListItemText
               primary={player.name}
               secondary={isMaster && "Ведущий"}

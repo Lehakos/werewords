@@ -1,18 +1,37 @@
-import React from "react";
-import { useStore } from "effector-react";
+import React, { useState } from "react";
 import Box from "@material-ui/core/Box";
 import { useTheme } from "@material-ui/core/styles";
 
-import { DisplaySecret } from "components/DisplaySecret";
-import { Card } from "components/Card";
-import { $word } from "model/game";
+import { DisplaySecret } from "shared/components/DisplaySecret";
+import { Card } from "shared/components/Card";
+import { useSelectWord } from "model/game";
+import { roleNames, roles } from "shared/constants/roles";
+import { nextScreen } from "model/routing";
+import { useAppDispatch } from "shared/app-state";
 
-import { $showTo, changeIndexRequest } from "./model";
+const showToRoles = [roleNames[roles.traitor], roleNames[roles.helper]];
 
 export const ShowWord = () => {
-  const showTo = useStore($showTo);
-  const word = useStore($word);
+  const [showToIndex, setShowToIndex] = useState(0);
+  const word = useSelectWord();
   const theme = useTheme();
+  const showTo = showToRoles[showToIndex];
+  const dispatch = useAppDispatch();
+
+  const nextShowTo = () => {
+    const nextIndex = showToIndex + 1;
+
+    if (nextIndex >= showToRoles.length) {
+      dispatch(nextScreen());
+      return;
+    }
+
+    setShowToIndex(nextIndex);
+  };
+
+  if (!showTo) {
+    return null;
+  }
 
   return (
     <DisplaySecret
@@ -24,7 +43,7 @@ export const ShowWord = () => {
           </Box>
         </>
       }
-      onHideSecret={() => changeIndexRequest()}
+      onHideSecret={nextShowTo}
     >
       <Card
         backgroundColor={theme.palette.grey[200]}

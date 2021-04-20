@@ -1,3 +1,2 @@
-export { nextScreenRequest, setScreen } from "./events";
-export { $currentScreen, $currentScreenIndex } from "./stores";
+export * from "./slice";
 export { ScreensEnum } from "./constants";

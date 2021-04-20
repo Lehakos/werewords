@@ -2,8 +2,8 @@ import React from "react";
 import { useTheme, Theme } from "@material-ui/core/styles";
 import { red, green } from "@material-ui/core/colors";
 
-import { Card } from "components/Card";
-import { Role, roles, roleNames } from "shared/roles";
+import { Card } from "shared/components/Card";
+import { Role, roles, roleNames } from "shared/constants/roles";
 
 type Props = {
   role: Role;

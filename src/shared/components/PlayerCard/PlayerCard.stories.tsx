@@ -1,6 +1,6 @@
 import React from "react";
 
-import { markerTypes } from "shared/markerTypes";
+import { markerTypes } from "shared/constants/markerTypes";
 
 import { PlayerCard } from "./PlayerCard";
 

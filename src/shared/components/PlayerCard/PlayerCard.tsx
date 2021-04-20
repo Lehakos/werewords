@@ -6,8 +6,8 @@ import Box from "@material-ui/core/Box";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 
-import { markerNames, MarkerType } from "shared/markerTypes";
-import { useHover } from "libs/useHover";
+import { markerNames, MarkerType } from "shared/constants/markerTypes";
+import { useHover } from "shared/libs/useHover";
 
 import { Marker } from "../Marker";
 import { MarkersList } from "../MarkersList";

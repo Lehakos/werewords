@@ -1,17 +1,16 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
-import { useStore } from "effector-react";
 
 import { AddPlayers } from "screens/AddPlayers";
 import { ShowRoles } from "screens/ShowRoles";
 import { ShowWord } from "screens/ShowWord";
 import { ChooseWord } from "screens/ChooseWord";
 import { GameBoard } from "screens/GameBoard";
-import { ScreensEnum, $currentScreenIndex } from "model/routing";
+import { ScreensEnum, useSelectCurrentScreenIndex } from "model/routing";
 
 function App() {
-  const currentScreen = useStore($currentScreenIndex);
+  const currentScreen = useSelectCurrentScreenIndex();
   const isAddPlayers =
     currentScreen === ScreensEnum.addPlayers ||
     currentScreen === ScreensEnum.showRoles;

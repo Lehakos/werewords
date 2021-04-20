@@ -1,4 +1,4 @@
-import { Role } from "shared/roles";
+import { Role } from "shared/constants/roles";
 
 export type PlayerBaseInformation = {
   id: string;

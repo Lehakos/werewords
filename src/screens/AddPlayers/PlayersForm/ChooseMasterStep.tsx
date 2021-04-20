@@ -3,18 +3,19 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-import { changeMaster, $master, $players } from "../model";
-import { useStore } from "effector-react";
+import { useSelectPlayers, changeMaster, useSelectMaster } from "model/players";
+import { useAppDispatch } from "shared/app-state";
 
 export const ChooseMasterStep = () => {
-  const master = useStore($master);
-  const players = useStore($players);
+  const players = useSelectPlayers();
+  const master = useSelectMaster();
+  const dispatch = useAppDispatch();
 
   return (
     <RadioGroup
-      value={master}
+      value={master?.id}
       onChange={({ target: { value } }: ChangeEvent<HTMLInputElement>) =>
-        changeMaster(value)
+        dispatch(changeMaster(value))
       }
     >
       {players.map((player) => {

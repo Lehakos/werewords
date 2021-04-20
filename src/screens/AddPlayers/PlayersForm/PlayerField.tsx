@@ -4,14 +4,14 @@ import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-import { PlayerData } from "../model/types";
+import { Player } from "model/players";
 
 type PlayerFieldProps = {
   onDelete: (id: string) => void;
-  onChange: (data: PlayerData) => void;
+  onChange: (data: Player) => void;
   onEnter: () => void;
   cannotDelete: boolean;
-  data: PlayerData;
+  data: Player;
 };
 
 export const PlayerField = ({

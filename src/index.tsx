@@ -7,8 +7,10 @@ import {
   createMuiTheme,
 } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { Provider } from "react-redux";
 
-import App from "./App";
+import App from "./app/App";
+import { store } from "./app/store";
 import * as serviceWorker from "./serviceWorker";
 
 const theme = createMuiTheme();
@@ -18,10 +20,12 @@ ReactDOM.render(
     <StylesProvider injectFirst>
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
-          <>
-            <CssBaseline />
-            <App />
-          </>
+          <Provider store={store}>
+            <>
+              <CssBaseline />
+              <App />
+            </>
+          </Provider>
         </ThemeProvider>
       </MuiThemeProvider>
     </StylesProvider>

@@ -31,16 +31,16 @@ export const DisplaySecret: FC<Props> = ({ title, onHideSecret, children }) => {
   };
 
   useEffect(() => {
-    const hadleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       e.preventDefault();
       handleChangeState();
     };
 
-    window.removeEventListener("keydown", hadleKeyDown);
-    window.addEventListener("keydown", hadleKeyDown);
+    window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", hadleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleChangeState]);
 

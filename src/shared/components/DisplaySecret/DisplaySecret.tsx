@@ -36,7 +36,6 @@ export const DisplaySecret: FC<Props> = ({ title, onHideSecret, children }) => {
       handleChangeState();
     };
 
-    window.removeEventListener("keydown", handleKeyDown);
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
